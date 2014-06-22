@@ -13,7 +13,7 @@ object ApplicationBuild extends Build {
       jdbc,
       cache,
 
-      "securesocial" %% "securesocial" % "master-SNAPSHOT",
+      "securesocial" %% "securesocial" % "2.1.2",
 
       // in play 2.1.1 tests are run twice unless dependency is added
       "com.novocode" % "junit-interface" % "0.10-M2"
@@ -29,11 +29,11 @@ object ApplicationBuild extends Build {
     resolvers ++= Seq(
       "Eligosource Releases Repo" at "http://repo.eligotech.com/nexus/content/repositories/eligosource-releases/"
 
-      //Resolver.url("sbt-plugin-snapshots", new URL("http://repo.scala-sbt.org/scalasbt/sbt-plugin-snapshots/"))(Resolver.ivyStylePatterns)
+      //Resolver.url("sbt-plugin-releases", new URL("http://repo.scala-sbt.org/scalasbt/sbt-plugin-snapshots/"))(Resolver.ivyStylePatterns)
 
     ),
 
-    resolvers += Resolver.url("sbt-plugin-snapshots", new URL("http://repo.scala-sbt.org/scalasbt/sbt-plugin-snapshots/"))(Resolver.ivyStylePatterns),
+    resolvers += Resolver.url("sbt-plugin-releases", new URL("http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/"))(Resolver.ivyStylePatterns),
 
     libraryDependencies ++= Seq(
       "org.eligosource" %% "eventsourced-core" % "0.6.0",
